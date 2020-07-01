@@ -1,0 +1,411 @@
+@charset "utf-8";
+
+@import url(reset.css);
+
+
+/* ******************** 레이아웃 구성시작 ******************** */
+
+#wrap, #wrap>div{width: 100%;}
+
+#navi{height: 63px; margin-bottom: 42px;}
+#mainview{height: 651px;}
+#contents{height: auto;}
+#contents>div{width: 100%;}
+#footer{height: 588px;}
+#footer>div{width: 100%;}
+#footer #f-top{height: 399px;}
+#footer #f-bottom{height: 189px;}
+
+.container{width: 1170px; height: 100%; margin: auto;}
+
+
+/* ******************** 공통영역 구성시작 ******************** */
+
+/* Button Setting */
+.btn{
+  display: inline-block; width: 130px; height: 42px;
+  font: 700 1.4em/42px 'Nanum Gothic', sans-serif;
+  text-align: center; border-radius: 21px;
+}
+
+.btn1{color: #fff; border: 1px solid #fff;}
+.btn1:hover{color: #000; background-color: #fff;}
+.btn2{color: #222; border: 1px solid #000;}
+.btn2:hover{color: #fff; background-color: #000;}
+
+.btn1, .btn2{
+  -webkit-transition: all ease 0.4s;
+  -moz-transition: all ease 0.4s;
+  -o-transition: all ease 0.4s;
+  transition: all ease 0.4s;
+}
+
+/* 트랜지션 초기설정 해제 */
+.preload * {
+  -webkit-transition: none !important;
+  -moz-transition: none !important;
+  -ms-transition: none !important;
+  -o-transition: none !important;
+}
+
+
+
+/* ******************** 개별영역 구성시작 ******************** */
+
+/* ******************* Navi Area Start ***************** */
+
+#navi{border-bottom: 1px solid #ccc;}
+#navi .container{position: relative;}
+
+
+/* Site Logo */
+#navi h1{
+  width: 169px; height: 27px;
+  position: absolute; left: 50%; top: 50%;
+  margin-left: -84px; margin-top: -13px;
+}
+#navi h1 a{
+  background: url(../images/logo.png) no-repeat 0 0;
+}
+
+
+/* Gnb */
+#navi .gnb{width: 500px; height: 100%; float: left;}
+#navi .gnb li{height: 100%; float: left;}
+#navi .gnb li a{
+  display: block; height: 100%; padding: 0 10px;
+  font: 700 1em/63px 'Nanum Gothic', sans-serif;
+  position: relative;
+}
+#navi .gnb li a::after{
+  content:''; display: block; width: 100%; height: 3px; 
+  position: absolute; left: 0; bottom: 0; 
+}
+#navi .gnb li a:hover{color: #3f10fa;}
+#navi .gnb li a:hover::after{background-color: #3f10fa;}
+
+
+/* q-menu */
+#navi .q-menu{
+  width: 300px; height: 100%; padding-top: 21px; float: right;
+  font: 700 1.3em/21px 'Nanum Gothic', sans-serif;
+  text-align: right; padding-right: 50px;
+}
+#navi .q-menu .icon-group{  
+  display: inline-block; margin-left: 20px; font-size: 1.23em;
+}
+#navi .q-menu .icon-group a{margin-right: 5px;}
+
+
+/* **************** Mainview Area Start **************** */
+#mainview{
+  margin-bottom: 42px;
+  background: url(../images/mainimg.png) no-repeat top center;
+}
+#mainview .container{position: relative;}
+#mainview .caption{
+  width: 330px; height: 357px;
+  position: absolute; left: 70px; top: 126px;
+}
+#mainview .caption .logo-box{
+  width: 130px; height: 126px; margin-bottom: 21px;
+}
+#mainview .caption h2{
+  width: 100%; height: 126px; margin-bottom: 42px;
+  font: 700 5.4em/1.2 'Nanum Gothic', sans-serif;
+  color: #fff;
+}
+
+
+
+/* **************** Contents Area Start **************** */
+
+/* *********** product-select Area Start ************* */
+
+#product-select{width: 100%; height: auto; margin-bottom: 84px;}
+
+
+/* Title Area Start */
+#product-select .title{
+  width: 100%; height: 210px; padding-top: 63px; 
+  text-align: center; 
+}
+#product-select .title h2{
+  width: 100%; height: 42px;
+  font: 700 3.6em/42px 'Nanum Gothic', sans-serif;
+  margin-bottom: 21px;
+}
+#product-select .title p{width: 100%; height: 21px;}
+#product-select .title p a:hover{color: #c00;}
+
+
+/* Content Area Start */
+#product-select .content{
+  width: 100%; height: 483px; 
+  display: flex; justify-content: space-between;
+}
+#product-select .content>div{
+  width: 270px; height: 483px; background-color: #f2f2f2; 
+  text-align: center; 
+}
+#product-select .content>div .img-box{
+  width: 100%; height: 252px; margin-bottom: 21px;
+  display: flex; justify-content: center; align-items: center;
+}
+#product-select .content>div h3{
+  width: 100%; height: 21px;
+  font: 700 1.4em/21px 'Nanum Gothic', sans-serif;
+}
+#product-select .content>div p{
+  width: 100%; height: 21px; line-height: 21px;
+  margin-bottom: 84px;
+}
+
+
+
+/* *************** event Area Start ****************** */
+#event{width: 100%; height: 546px; margin-bottom: 84px;}
+#event .container{
+  background: url(../images/eventimg.png) no-repeat 0 0;
+}
+#event .caption{
+  width: 500px; height: 210px; padding: 168px 0 0 70px;
+}
+#event .caption h2{
+  width: 100%; height: 42px; 
+  font: 700 4.4em/42px 'Nanum Gothic', sans-serif;
+  margin-bottom: 42px;
+}
+#event .caption p{
+  width: 100%; height: 42px; font-size: 1.5em;
+  margin-bottom: 42px;
+}
+#event .caption p span{font-size: 0.93em;}
+
+
+/* **************** show Area Start ****************** */
+#show{width: 100%; height: 630px; margin-bottom: 84px;}
+#show .container{
+  background: url(../images/showimg.png) no-repeat 0 0;
+}
+
+
+
+/* ************ product-infor Area Start ************* */
+#product-infor{width: 100%; height: auto;}
+#product-infor .container>div{
+  width: 100%; height: 525px; display: flex;
+}
+#product-infor .container>div:nth-child(odd){
+  flex-direction: row-reverse;
+}
+#product-infor .container>div .text-box,
+#product-infor .container>div img{
+  width: 50%; height: 100%; flex: 1;
+}
+#product-infor .container>div .text-box{padding: 147px 0 0 85px;}
+#product-infor .container>div .text-box h2{
+  width: 100%; height: 42px; margin-bottom: 42px;
+  font: 400 5em/42px 'Nanum Gothic', sans-serif;
+}
+#product-infor .container>div .text-box h2+p{
+  font-size: 1.6em; margin-bottom: 21px;
+}
+#product-infor .container>div .text-box h2+p+p{
+  width: 410px; margin-bottom: 42px;
+}
+
+
+/* ************** magazine Area Start **************** */
+#magazine{width: 100%; height: 525px;}
+#magazine .container{
+  text-align: center; padding-top: 105px;
+  background: url(../images/magazineimg.png) no-repeat 0 0;
+}
+#magazine .container h2{
+  width: 100%; height: 42px; 
+  font: 700 5em/42px 'Nanum Gothic', sans-serif;
+  margin-bottom: 42px;
+}
+#magazine .container p{margin-bottom: 189px;}
+
+
+
+/* ***************** Footer Area Start ***************** */
+#footer>div{width: 100%;}
+
+/* *************** f-top Area Start ****************** */
+#footer #f-top{
+  height: 399px; background-color: #f7f7f7;
+  border-top: 1px solid #ccc; padding: 63px 0 42px;
+}
+#footer #f-top .container{position: relative;}
+
+#footer #f-top .box{width: 100%; height: 273px; display: flex;}
+#footer #f-top .box>div:nth-child(1){flex: 2;}
+#footer #f-top .box>div:nth-child(2){flex: 1;}
+#footer #f-top .box>div:nth-child(3){flex: 1;}
+
+#footer #f-top .box>div h3{
+  width: 100%; height: 21px; margin-bottom: 21px;
+  font: 700 1.6em/21px 'Nanum Gothic', sans-serif;
+}
+
+
+/* Sitemap Area Start */
+#footer .box>div:nth-child(1) ul{width: 100%; height: auto;}
+#footer .box>div:nth-child(1) li{
+  width: 50%; height: 21px; line-height: 21px; float: left;
+  margin-bottom: 10px;
+}
+#footer .box>div:nth-child(1) li a:hover{color: #c00;}
+
+
+/* Customer Area Start */
+#footer .box>div:nth-child(2) ul{width: 100%; height: auto;}
+#footer .box>div:nth-child(2) li{
+  width: 100%; height: 21px; line-height: 21px; 
+  margin-bottom: 15px;
+}
+#footer .box>div:nth-child(2) li a:hover{color: #c00;}
+#footer .box>div:nth-child(2) li i{margin-right: 5px;}
+
+
+/* SNS Area Start */
+#footer .box .sns-group{
+  width: 100%; height: 42px; 
+  margin-bottom: 21px; line-height: 21px;
+}
+#footer .box .sns-group a{font-size: 3em; margin-right: 15px;}
+
+#footer .box .mark-group{
+  width: 100%; height: 42px; line-height: 21px;
+}
+#footer .box .mark-group a{margin-right: 20px;}
+#footer .box .mark-group a:nth-child(2){
+  position: relative; top: -3px;
+}
+
+
+/* Top Area Start */
+#footer #f-top .container .top-btn{
+  width: 80px; height: 21px;
+  font: 400 1.6em/21px 'Nanum Gothic', sans-serif;
+  position: absolute; right: 50px; top: -20px;
+  text-align: right;
+}
+#footer #f-top .container .top-btn:hover{color: #c00;}
+
+
+/* ************** f-bottom Area Start **************** */
+#footer #f-bottom{
+  height: 231px; background-color: #363636; padding: 42px 0;
+  color: #fff;
+}
+
+#footer #f-bottom .f-menu{
+  width: 100%; height: 21px; margin-bottom: 42px; 
+  text-align: center;
+}
+#footer #f-bottom .f-menu li{
+  height: 21px; display: inline-block;
+}
+#footer #f-bottom .f-menu li a{
+  display: inline-block; height: 21px; padding: 0 15px;
+  font: 700 1em/21px 'Nanum Gothic', sans-serif;
+  color: #fff;
+}
+#footer #f-bottom .f-menu li a:hover{color: #fc0;}
+
+#footer #f-bottom address{
+  width: 100%; height: 42px; line-height: 1.5;
+  font-style: normal;
+}
+
+
+
+/* ***************** Light-box Area Start ***************** */
+
+/* Light box Button Start */
+.lightbox-btn{
+  width: 120px; height: 70px; 
+  font: 700 1.4em 'Nanum Gothic', sans-serif;
+  color: #fff;
+  text-align: center;
+  padding-top: 10px;
+  background-color: #1e6198;
+  border-radius: 8px 8px 0 0;
+  position: fixed; right: -25px; top: 50%;
+
+  -webkit-transform: translateY(-50%) rotate(-90deg);
+  -moz-transform: translateY(-50%) rotate(-90deg);
+  -o-transform: translateY(-50%) rotate(-90deg);
+  transform: translateY(-50%) rotate(-90deg);
+  transform-origin: top center;
+
+  -webkit-transition: all ease 0.8s;
+  -moz-transition: all ease 0.8s;
+  -o-transition: all ease 0.8s;
+  transition: all ease 0.8s;
+}
+.lightbox-btn:hover{right: -15px;}
+
+
+/* Light box Contents Start */
+.lightbox-wrap{
+  width: 100%; height: 100%;
+  background-color: rgba(0, 0, 0, 0.5);
+  position: fixed; left: 0; top: 0;
+  display: none;
+}
+.lightbox-wrap .lightbox-content{
+  width: 450px; height: 650px; border-radius: 5px;
+  background-color: #fff; padding: 42px 20px;
+  position: absolute; left: 50%; top: 50%;
+  
+  -webkit-transform: translate(-50%,-50%);
+  -moz-transform: translate(-50%,-50%);
+  -o-transform: translate(-50%,-50%);
+  transform: translate(-50%,-50%);
+}
+.lightbox-wrap .lightbox-content .logo-box{
+  width: 100%; height: 42px; margin-bottom: 42px;
+  line-height: 42px;
+}
+.lightbox-wrap .lightbox-content .logo-box img{
+  float: left; position: relative; top: 12px;
+}
+.lightbox-wrap .lightbox-content .logo-box a{
+  display: inline-block; width: 30px; height: 42px; float: right;
+  font-size: 2em; 
+}
+.lightbox-wrap .lightbox-content h2{
+  width: 60%; height: 42px; margin: 0 auto 21px; 
+  color: #0f3e80; text-align: center;
+}
+.lightbox-wrap .lightbox-content h2 span{
+  font-weight: normal; display: block;
+}
+.lightbox-wrap .lightbox-content ul{
+  width: 90%; height: auto; margin: auto;
+}
+.lightbox-wrap .lightbox-content li{
+  width: 100%; height: 100px; margin-bottom: 21px;
+  border: 1px solid #ccc; border-radius: 10px;
+  padding: 10px 20px 20px 70px;
+}
+.lightbox-wrap .lightbox-content li:nth-child(1){
+  background: url(../images/icon_web.png) no-repeat 10px 12px;
+}
+.lightbox-wrap .lightbox-content li:nth-child(2){
+  background: url(../images/icon_product.png) no-repeat 10px 12px;
+}
+.lightbox-wrap .lightbox-content li:nth-child(3){
+  background: url(../images/icon_other.png) no-repeat 10px 12px;
+}
+.lightbox-wrap .lightbox-content li h3{
+  margin-bottom: 10px;
+}
+.lightbox-wrap .lightbox-content li p{
+  font-size: 1em;
+}
